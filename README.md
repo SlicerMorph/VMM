@@ -10,6 +10,7 @@ SlicerMorph is an extension of 3D Slicer. It can be installed either using the E
 
 The only difference between the extension version and the customized SlicerMorph package is auto3Dgm. As of March 4/27/2020, auto3Dgm is only available through the custom SlicerMorph application, which we will soon become separate extension of 3D Slicer. Another benefit of custom SlicerMorph applications is that it is portable (ie., you can run it from a USB stick).
 
-[This link summarized some of the capabilities of 3D Slicer](https://docs.google.com/document/d/1VdsYQzhjEh9tT5WQQjb1GUdn5Hmnq8cK3yLzjYeVv5M/edit)
+[This link summarizes some of the key capabilities of 3D Slicer and SlicerMorph relevant to 3D morphometrics](https://docs.google.com/document/d/1VdsYQzhjEh9tT5WQQjb1GUdn5Hmnq8cK3yLzjYeVv5M/edit)
 
 ## What SlicerMorph is not?
+SlicerMorph is designed to help you with all the steps associated with working 3D morphology data: Importing data, visualizing, segmenting, measuring and analyzing. However, it is not a replacement for statistical shape analysis packages like R/geomorph or Morpho. In fact, it is our expectation that once you generate and vet your data, you will use one of those packages to do your domain specific statistical analysis. 
