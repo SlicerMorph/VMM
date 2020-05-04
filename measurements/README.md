@@ -3,12 +3,13 @@ This tutorial was modified from lab 4 of the SlicerMorph workshop. For more info
 
 ## Importing images
 There are many ways to import your data into Slicer, and I'm not going to go through all of them, but I do want to point out 2 **SlicerMorph** specific modules that may help a lot of you out! both of these 
-    *`ImageStacks` - Is found in SlicerMorph under the SlicerMorphLabs subheading. This module allows you to import a list of image files and downsample (if needed) in a sigle step. 
-    *`SkyscanReconImport` - If you are using a Skyscan scanner you can imort the log file and it will import your image with the spaceing from the log file. 
-    *Once you have your images imported, recommend saving as .nrrd or your other prefered image file so that it is easier to import in future Slicer sessions. 
-    *For more information on importing differnt types of images, see [Data Formatting lab](https://github.com/SlicerMorph/W_2020/tree/master/Lab02_Slicer_2_Data_Import) from the SlicerMorph workshop. 
+
+  * `ImageStacks` - Is found in SlicerMorph under the SlicerMorphLabs subheading. This module allows you to import a list of image files and downsample (if needed) in a sigle step. 
+  * `SkyscanReconImport` - If you are using a Skyscan scanner you can imort the log file and it will import your image with the spaceing from the log file. 
+  * Once you have your images imported, recommend saving as .nrrd or your other prefered image file so that it is easier to import in future Slicer sessions. 
+  * For more information on importing differnt types of images, see [Data Formatting lab](https://github.com/SlicerMorph/W_2020/tree/master/Lab02_Slicer_2_Data_Import) from the SlicerMorph workshop. 
   
-##Importing files from MorphoSource
+## Importing files from MorphoSource
 Using the SlicerMorph `MorphoSource` Module you can now login to MorphoSouce, browse for your desired specimens, and load them into SlicerMorph. 
 
 ## Markup Types
