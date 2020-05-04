@@ -1,4 +1,4 @@
-# SlicerMorph Specific Modules: Statistical Shape Analysis
+# SlicerMorph Modules: Statistical Shape Analysis with the GPA module
 
 ## Preliminary Steps
 * Review your *Temp* and *Cache* folder settings under Preferences. Make sure these two point to folders that you can easily access (e.g., c:/SlicerTemp/ for Temp and C:/SlicerTemp/RemoteIO for cache folders)
