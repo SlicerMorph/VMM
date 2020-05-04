@@ -31,11 +31,11 @@ Therefore, we developed a SlicerMorph specific module called `ImageStacks` to im
 5. Enter the voxel spacing information. (Browse the log file for this information)
 5. Create a new volume node to contain this scan. 
 
-<img src='images/ImageStacks1.PNG'>
+<img src='images/ImageStacks1.png'>
 
 7. Review the resultant image using the `Volumes` module.
 
-<img src='images/Volumes1.PNG'>
+<img src='images/Volumes1.png'>
 
 
 ### Import non-DICOM image sequences from Bruker\Skyscan using `SkyScanReconImport` module
@@ -44,13 +44,13 @@ Therefore, we developed a SlicerMorph specific module called `ImageStacks` to im
 2. Click the `...` button to navigate to the log file from the archive.
 3. Hit Apply.
 
-<img src='images/SkyScanReconImport.PNG'>
+<img src='images/SkyScanReconImport.png'>
 
 7. Review the resultant image using the `Volumes` module.
 
 :pencil2: `SkyScanReconImport` works only for unmodified image stacks from Nrecon software. 
 
-<img src='images/Volumes2.PNG'>
+<img src='images/Volumes2.png'>
 
 
 ### Import a DICOM image Sequence
