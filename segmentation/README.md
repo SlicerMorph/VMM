@@ -24,7 +24,7 @@ Therefore, we developed a SlicerMorph specific module called `ImageStacks` to im
 1. Go to the `Sample Data` module of SlicerMorph, scroll down to find the SlicerMorph section of the `Sample Data` module 
 2. Click on the **Bruker\SkyScan mCT Recon import** button to download the zip file into your SlicerMorph Cache folder. 
 
-<img src='images/SampleData.PNG'>
+<img src='images/SampleData.png'>
 
 3. Unzip the contents of the archive to convenient location. Note that there is log file **P0_2_Rec.log** that contains important information about the scan. 
 4. Switch to `ImageStacks` module and choose the files to import into SlicerMorph. 
