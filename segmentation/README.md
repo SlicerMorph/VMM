@@ -24,18 +24,18 @@ Therefore, we developed a SlicerMorph specific module called `ImageStacks` to im
 1. Go to the `Sample Data` module of SlicerMorph, scroll down to find the SlicerMorph section of the `Sample Data` module 
 2. Click on the **Bruker\SkyScan mCT Recon import** button to download the zip file into your SlicerMorph Cache folder. 
 
-<img src='images/SampleData.PNG'>
+<img src='images/SampleData.png'>
 
 3. Unzip the contents of the archive to convenient location. Note that there is log file **P0_2_Rec.log** that contains important information about the scan. 
 4. Switch to `ImageStacks` module and choose the files to import into SlicerMorph. 
 5. Enter the voxel spacing information. (Browse the log file for this information)
 5. Create a new volume node to contain this scan. 
 
-<img src='images/ImageStacks1.PNG'>
+<img src='images/ImageStacks1.png'>
 
 7. Review the resultant image using the `Volumes` module.
 
-<img src='images/Volumes1.PNG'>
+<img src='images/Volumes1.png'>
 
 
 ### Import non-DICOM image sequences from Bruker\Skyscan using `SkyScanReconImport` module
@@ -44,13 +44,13 @@ Therefore, we developed a SlicerMorph specific module called `ImageStacks` to im
 2. Click the `...` button to navigate to the log file from the archive.
 3. Hit Apply.
 
-<img src='images/SkyScanReconImport.PNG'>
+<img src='images/SkyScanReconImport.png'>
 
 7. Review the resultant image using the `Volumes` module.
 
 :pencil2: `SkyScanReconImport` works only for unmodified image stacks from Nrecon software. 
 
-<img src='images/Volumes2.PNG'>
+<img src='images/Volumes2.png'>
 
 
 ### Import a DICOM image Sequence
