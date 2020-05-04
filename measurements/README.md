@@ -1,6 +1,16 @@
 # Measurements and Visualization 
 This tutorial was modified from lab 4 of the SlicerMorph workshop. For more infomration on measurments and visualizations in SlicerMorph see the full workhop: https://github.com/SlicerMorph/W_2020
 
+## Importing images
+There are many ways to import your data into Slicer, and I'm not going to go through all of them, but I do want to point out 2 **SlicerMorph** specific modules that may help a lot of you out! both of these 
+  *`ImageStacks` - Is found in SlicerMorph under the SlicerMorphLabs subheading. This module allows you to import a list of image files and downsample (if needed) in a sigle step. 
+  *`SkyscanReconImport` - If you are using a Skyscan scanner you can imort the log file and it will import your image with the spaceing from the log file. 
+  *Once you have your images imported, recommend saving as .nrrd or your other prefered image file so that it is easier to import in future Slicer sessions. 
+  *For more information on importing differnt types of images, see [Data Formatting lab](https://github.com/SlicerMorph/W_2020/tree/master/Lab02_Slicer_2_Data_Import) from the SlicerMorph workshop. 
+  
+##Importing files from MorphoSource
+Using the SlicerMorph `MorphoSource` Module you can now login to MorphoSouce, browse for your desired specimens, and load them into SlicerMorph. 
+
 ## Markup Types
 IMPORTANT: Before you start any markups make sure your volume spacing is correct in the `volumes` module! 
 
@@ -18,6 +28,9 @@ Place three points sequentially. This forms two vectors where the second point p
 
 **Open and closed curves:**
 Sequentially place points. A curve will be fit to the points and updated as additional points are added. If the closed curve is selected, the first and last points placed will be connected.
+
+**Planes**
+Place 2 points sequentally, creating a plane between the 2 points. Can be placed in slice or 3D views. 
 
 <img src="./images/MarkupTypes.png">
 
@@ -39,42 +52,11 @@ Fiducial points and anchor points of lines, curves, and angles can be accessed a
   * Expand the Advanced tab for additional options.
   * In the Control Points menu, use the table to adjust visibility, labels, and position of individual fiducials or anchor points. This is also where you can modify if you want just the numbers or just labels for markup points. 
 <img src="./images/markupsModule2.png">
-
-## Example 1: Using Markups for Measurement
-In this example, we will place a closed curve on one slice of a CT scan, measure the area of the curve, and visualize the region. For more detail and discussion, see the Slicer discourse thread [here](https://discourse.slicer.org/t/how-can-i-calculate-an-area-on-a-ct-image-i-can-calculate-volumes-mm-3-but-not-areas-mm-2/1549/7).
-
-1. If you would like to follow along I'm working off of the MRIHead volume in the `Sample Data` module. 
- <img src="./images/sampleData.png">
-
-2. Select the closed curve markup mode and place a curve around the brain tissue in the red view window (axial slice). You can change the Slicer layout to red window only for better detail. When placing the curve click as many times as you need to in order to get your desigred shape. One really handy tool in the `Markups` modlue is the resample cuve tool which will allow you to resample your curve with a given number of equally spaced points. 
-<img src="./images/CurveOnRed.png">
-
-3. If you're comfortable with python, you can script write in slicer using the Python Interactor. As an eample, open the Python Interactor and paste the following snippet of code to calculate the area of the curve we just outlined: 
-```
-curve=slicer.util.getNodesByClass("vtkMRMLMarkupsClosedCurveNode")[0]
-crossSectionSurface = vtk.vtkPolyData()
-areaMm2 = slicer.modules.markups.logic().GetClosedCurveSurfaceArea(curve, crossSectionSurface)
-print("Curve {0}: surface area = {1:.2f} mm2".format(curve.GetName(), areaMm2))
-```
-<img src="./images/pythonInteract.png">
-
-
-4. Now we can visualize the area of the curve, type the following code snippet in the Python Interactor, then witch back to the conventional view:
-```
-crossSectionSurfaceModel = slicer.modules.models.logic().AddModel(crossSectionSurface)
-crossSectionSurfaceModel.SetName("{0} surface".format(curve.GetName()))
-crossSectionSurfaceModel.CreateDefaultDisplayNodes()
-crossSectionSurfaceModel.GetDisplayNode().BackfaceCullingOff()
-crossSectionSurfaceModel.GetDisplayNode().SetColor(curve.GetDisplayNode().GetColor())
-crossSectionSurfaceModel.GetDisplayNode().SetOpacity(0.5)
-crossSectionSurfaceModel.SetDescription("Area[mm2] = {0:.2f}".format(areaMm2))
-```
- <img src="./images/VisualizingCurveArea.png">
  
 ## Visualization: Displaying Mesh Data
 Mesh data in Slicer is displayed using the `Models` Module. It can not be rendered using the `Volume Render` module. Fiducial points are automatically placed on the surface of the a loaded mesh and will be constrained to the surface when they are moved. The control points for other markups are also constrained to mesh surfaces when present. 
 
-## Example 2: Displaying a Mesh and resampling a curve on the surface
+## Example: Displaying a Mesh and resampling a curve on the surface
 1. For this example I'm working off the Gorilla Skull Reference Model under the SlicerMorph tab of the `Sample Data` module (you will need SLicerMorph installed to see this option in the menu).
 
 <img src="./images/sampleDataGorilla.png">
@@ -112,7 +94,7 @@ The `Volume Rendering` module provides interactive visualization of 3D image dat
   * Crop 3D view vs Crop Volume confusion
 
 
-## Example 3: Volume Rendering 
+## Example: Volume Rendering 
 1. Load the MRIHead volume from the `Sample Data` module.
 2. Open the `Volume Rendering` module. In the **Volume** field, make sure the volume MRHead is selected. Click the eyeball next to the **Volume** field to display the image. You can change the 3D Slicer layout to 3D only.
 
@@ -123,3 +105,21 @@ The `Volume Rendering` module provides interactive visualization of 3D image dat
 
 4. Under the **Display** tab, click on the **Select a Preset** menu. This menu contains saved transfer functions that work well for common data types. Select **MRI Default** (row 4, column 5). Try adjusting the color and opacity functions of this suggested display setting.
 <img src="./images/colorPreset.png">
+
+## SlicerAnimator
+The `Animator` module helps create and export animations in mp4 or GIF format. The animations are created by visualizing a volume and adjusting the rotation, ROI cropping, and rendering properties. A demo video of this module is also available [here](https://youtu.be/9GBekYcJR4E) .
+
+1. Load the MRIHead volume from the `Sample Data` module.
+
+2. Open the `Volume Rendering` module. In the **Volume** field, make sure the volume MRHead is selected. Click the eyeball next to the **Volume** field to display the image. Under the Display Menu, adjust the Shift sliderbar to optimize 3D visibility.
+
+2. Open the `Animator`  module. In the Animation Parameters dropdown menu, select the option to create a new animation. 
+<img src="./images/animatorModule.png">
+
+3. Select the **Add Action** button and choose **CameraRotationAction** from the menu. A CameraRotation action will be added to the Action menu. The properties of the rotation can be adjusted using the **Edit** button. To preview the animation, select the play button. 
+<img src="./images/addCamera.png">
+
+4. Select the **Add Action** button and choose **ROIAction** from the menu. Two ROI markups will be placed in the scene. The first ROI will be used to crop the region displayed at the start of the animation and the second will be used to crop the region displayed at the end of the animation. To adjust the placement of the ROIs, switch to the `Data` module and turn the visibility of the ROI markups on. Place the Start ROI around the whole head. Place the second ROI inside the brain. Return to the `Animator` module to preview the effect of this action. 
+<img src="./images/selectROI.png">
+
+5. When you are done adjusting the animation parameters, Select an output file location in the Export menu and click the **Export** button to save your animation.
