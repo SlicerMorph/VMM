@@ -1,4 +1,4 @@
-# Lab 06 SlicerMorph # 1: Statistical Shape Analysis: Work with sample data 
+# SlicerMorph Specific Modules: Statistical Shape Analysis
 
 ## Preliminary Steps
 * Review your *Temp* and *Cache* folder settings under Preferences. Make sure these two point to folders that you can easily access (e.g., c:/SlicerTemp/ for Temp and C:/SlicerTemp/RemoteIO for cache folders)
