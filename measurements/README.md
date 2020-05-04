@@ -31,7 +31,7 @@ Place three points sequentially. This forms two vectors where the second point p
 Sequentially place points. A curve will be fit to the points and updated as additional points are added. If the closed curve is selected, the first and last points placed will be connected.
 
 **Planes**
-Place 2 points sequentally, creating a plane between the 2 points. Can be placed in slice or 3D views. 
+Place 3 points sequentally, creating a plane between the 3 points. Can be placed in slice or 3D views. This is early in development and only available in the nightly preview version at the time of this tutorial. 
 
 <img src="./images/MarkupTypes.png">
 
