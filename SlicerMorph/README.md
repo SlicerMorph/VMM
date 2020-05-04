@@ -94,7 +94,7 @@ So far we have been looking at output of our PC analysis as series of vectors. W
 
 <img src="./images/Picture18.png">
 
-###[Videos of GPA tool functionality on the SlicerMorph youtube channel:](http://bit.ly/SM_youtube)
+### [Videos of GPA tool functionality on the SlicerMorph youtube channel:](http://bit.ly/SM_youtube)
 
 
 
