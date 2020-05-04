@@ -4,7 +4,7 @@ This tutorial was modified from lab 3 of the SlicerMorph workshop. For more info
 
 ## Importing data
 
-* **image stacks vs volume files** We prefer to import the image sequences and save them as 3D volume to the convenience of working with single files. The primary reason for that, except for DICOM format, most 2D image format are not well-suited to preserve the geometry and resolution information of volumetric scans. That means, if you import and image sequence into Slicer/SlicerMorph, and not save it in a 3D volume format, next time you want to work on the same dataset you will have to redo the import steps. Therefore, we suggest the first step in your workflow immediate after importing your data is to save it in a volumetric format (see below).  
+* **image stacks vs volume files** We prefer to import the image sequences and save them as 3D volume to the convenience of working with single files. The primary reason for it is that, except for DICOM format, most 2D image format are not well-suited to preserve the geometry and resolution information of volumetric scans. That means, if you import an image sequence into Slicer/SlicerMorph, and not save it in a 3D volumetric format, next time you want to work on the same dataset you will have to redo the import steps. Therefore, we suggest the first step in your workflow immediate after importing your data is to save it in a volumetric format (see below).  
 
 Additionally 3D Slicer would treat certain types of image sequences (namely JPG, PNG and BMO formats) as multichannel images, not scalar volumes. This creates additional complication and triples the memory requirement importing these data formats. 
 
