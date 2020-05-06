@@ -24,3 +24,5 @@ SlicerMorph is designed to help you with all the steps associated with working 3
 * Engage with Slicer(Morph) community: https://discourse.slicer.org
 * Signup for a semi-annual short-course at FHL http://workshop.slicermorph.org
 * Review previous short courses: https://github.com/SlicerMorph/W_2020  
+
+## [Signup sheet for breakout sessions](https://docs.google.com/spreadsheets/d/1qQqdBt-hU9B6EKlngNYohcxJkXsaIiCNPVzNiaDDgug/edit?usp=sharing)
