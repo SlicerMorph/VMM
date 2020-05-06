@@ -14,3 +14,13 @@ The only difference between the extension version and the customized SlicerMorph
 
 ## What SlicerMorph is not?
 SlicerMorph is designed to help you with all the steps associated with working 3D morphology data: Importing data, visualizing, segmenting, measuring and analyzing. However, it is not a replacement for statistical shape analysis packages like R/geomorph or Morpho. In fact, it is our expectation that once you generate and vet your data, you will use one of those packages to do your domain specific statistical analysis. We are working on approaches that will help you transition easily between working with SlicerMorph and R packages. 
+
+## Where to get started?
+* SlicerMorph Project website: http://SlicerMorph.org (links to tutorials, data etc)
+* Get 3D Slicer and SlicerMorph: https://download.slicer.org (use preview version)
+* Get packaged SlicerMorph: http://download.SlicerMorph.org 
+* Sign up for SlicerMorph listserve: http://bit.ly/SM-listserv 
+* Video tutorials for SlicerMorph specific functions: http://bit.ly/SM_youtube 
+* Engage with Slicer(Morph) community: https://discourse.slicer.org
+* Signup for a semi-annual short-course at FHL http://workshop.slicermorph.org
+* Review previous short courses: https://github.com/SlicerMorph/W_2020  
