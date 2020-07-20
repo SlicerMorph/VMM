@@ -1,5 +1,5 @@
 # SlicerMorph Tutorials for VMM
-SlicerMorph Tutorial for Virtual Morpho Meetup organized by Ian Dworking
+SlicerMorph Tutorial for Virtual Morpho Meetup organized by Ian Dworkin
 May 6th, 2020
 
 ## What is 3D Slicer and SlicerMorph
